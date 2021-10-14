@@ -1,0 +1,121 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+nav{
+    background-color: rgb(37, 9, 37);
+    color: #fff;
+    height:  75px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+nav ul{
+    list-style-type: none;
+}
+
+.gameContainer{
+    /* background-color: darkolivegreen; */
+    display: flex;
+    justify-content:center;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3 ,10vw);
+    grid-template-columns: repeat(3 ,10vw);
+    position: relative;
+}
+.box{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 2px solid #000;
+    font-size: 8vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color:rgb(165, 213, 231);
+}
+
+.gameInfo h1{
+    font-weight: 500;
+
+}
+.gameInfo{
+    
+    margin: 20px;
+    margin-left: 50px;
+    width: 30vw;
+    
+}
+
+img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Utility Classes */
+.bt0{
+    border-top: 0;
+}
+.br0{
+    border-right: 0;
+}
+.bb0{
+    border-bottom: 0;
+}
+.bl0{
+    border-left: 0;
+}
+#reset{
+    margin: 0 23px;
+    padding: 1px 18px;
+    background: #f3e7f9;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 15px;
+    font-weight: bolder;
+}
+.line{
+    background-color: #000;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .gameContainer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .container{
+        margin: auto;
+    }
+    .gameInfo{
+        text-align: center;
+        /* margin: 34px  auto; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+}
